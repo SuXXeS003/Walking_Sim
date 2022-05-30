@@ -1082,6 +1082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00713b8ba322ce4b8690bb3c9387932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &1061348411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00713b8ba322ce4b8690bb3c9387932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2057878507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,6 +1626,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00713b8ba322ce4b8690bb3c9387932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2142210863
 GameObject:
   m_ObjectHideFlags: 0

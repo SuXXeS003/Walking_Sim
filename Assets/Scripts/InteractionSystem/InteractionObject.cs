@@ -8,7 +8,7 @@ public class InteractionObject : MonoBehaviour
     private Camera _mainCamera;
     private Renderer _renderer;
     private RaycastHit _hit;
-    private int _interactableLayer = 1 << 6;
+    [SerializeField] private LayerMask _interactableLayer;
     private Ray _ray;
     private void Start()
     {
