@@ -19,7 +19,7 @@ public class InteractionObject : MonoBehaviour
     private void Update() {
         if (Mouse.current.leftButton.wasPressedThisFrame) {
             _ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(_ray, out _hit, 1f, _interactableLayer)) {
+            if (Physics.Raycast(_ray, out _hit, 0.3f, _interactableLayer)) {
                 if (_hit.transform == transform) {
                     var interactable = _renderer.GetComponent<IInteractionItem>();
                     
