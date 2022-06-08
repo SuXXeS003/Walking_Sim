@@ -71,6 +71,51 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""51e8e149-dd13-4a20-af39-933700c7e283"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""13301797-40a3-4576-8bb6-fe1819f0cef8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Middle click"",
+                    ""type"": ""Button"",
+                    ""id"": ""606d0503-ff5e-4f87-bfdc-7150bcb72e97"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Submit"",
+                    ""type"": ""Button"",
+                    ""id"": ""79b179c3-9d6e-4859-bbf8-9545c1b41bb3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""bbb0707d-4b06-47c8-993f-6ebe421ffee6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -271,6 +316,61 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""action"": ""PauseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24fc9a37-21af-482b-9ec7-a5619b208d2a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54ff7cdf-49bb-4741-bc66-874df9879bb9"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""728b9384-d694-4e70-ab7e-36bf4602f684"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Middle click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f520c0a-7355-4b39-902a-85cb42ea984f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18610c0f-f8e9-4d33-9e07-806c19903cd1"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -306,6 +406,11 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         m_FPSController_Zoom = m_FPSController.FindAction("Zoom", throwIfNotFound: true);
         m_FPSController_Crouch = m_FPSController.FindAction("Crouch", throwIfNotFound: true);
         m_FPSController_PauseMenu = m_FPSController.FindAction("PauseMenu", throwIfNotFound: true);
+        m_FPSController_LeftClick = m_FPSController.FindAction("Left Click", throwIfNotFound: true);
+        m_FPSController_RightClick = m_FPSController.FindAction("Right Click", throwIfNotFound: true);
+        m_FPSController_Middleclick = m_FPSController.FindAction("Middle click", throwIfNotFound: true);
+        m_FPSController_Submit = m_FPSController.FindAction("Submit", throwIfNotFound: true);
+        m_FPSController_Cancel = m_FPSController.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -370,6 +475,11 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
     private readonly InputAction m_FPSController_Zoom;
     private readonly InputAction m_FPSController_Crouch;
     private readonly InputAction m_FPSController_PauseMenu;
+    private readonly InputAction m_FPSController_LeftClick;
+    private readonly InputAction m_FPSController_RightClick;
+    private readonly InputAction m_FPSController_Middleclick;
+    private readonly InputAction m_FPSController_Submit;
+    private readonly InputAction m_FPSController_Cancel;
     public struct FPSControllerActions
     {
         private @InputSystemFirstPersonControls m_Wrapper;
@@ -379,6 +489,11 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         public InputAction @Zoom => m_Wrapper.m_FPSController_Zoom;
         public InputAction @Crouch => m_Wrapper.m_FPSController_Crouch;
         public InputAction @PauseMenu => m_Wrapper.m_FPSController_PauseMenu;
+        public InputAction @LeftClick => m_Wrapper.m_FPSController_LeftClick;
+        public InputAction @RightClick => m_Wrapper.m_FPSController_RightClick;
+        public InputAction @Middleclick => m_Wrapper.m_FPSController_Middleclick;
+        public InputAction @Submit => m_Wrapper.m_FPSController_Submit;
+        public InputAction @Cancel => m_Wrapper.m_FPSController_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_FPSController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -403,6 +518,21 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @PauseMenu.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPauseMenu;
                 @PauseMenu.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPauseMenu;
+                @LeftClick.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLeftClick;
+                @LeftClick.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLeftClick;
+                @LeftClick.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLeftClick;
+                @RightClick.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRightClick;
+                @Middleclick.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnMiddleclick;
+                @Middleclick.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnMiddleclick;
+                @Middleclick.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnMiddleclick;
+                @Submit.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnSubmit;
+                @Submit.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnSubmit;
+                @Submit.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnSubmit;
+                @Cancel.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnCancel;
             }
             m_Wrapper.m_FPSControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -422,6 +552,21 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @PauseMenu.started += instance.OnPauseMenu;
                 @PauseMenu.performed += instance.OnPauseMenu;
                 @PauseMenu.canceled += instance.OnPauseMenu;
+                @LeftClick.started += instance.OnLeftClick;
+                @LeftClick.performed += instance.OnLeftClick;
+                @LeftClick.canceled += instance.OnLeftClick;
+                @RightClick.started += instance.OnRightClick;
+                @RightClick.performed += instance.OnRightClick;
+                @RightClick.canceled += instance.OnRightClick;
+                @Middleclick.started += instance.OnMiddleclick;
+                @Middleclick.performed += instance.OnMiddleclick;
+                @Middleclick.canceled += instance.OnMiddleclick;
+                @Submit.started += instance.OnSubmit;
+                @Submit.performed += instance.OnSubmit;
+                @Submit.canceled += instance.OnSubmit;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
             }
         }
     }
@@ -442,5 +587,10 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         void OnZoom(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
+        void OnLeftClick(InputAction.CallbackContext context);
+        void OnRightClick(InputAction.CallbackContext context);
+        void OnMiddleclick(InputAction.CallbackContext context);
+        void OnSubmit(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
